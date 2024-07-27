@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    height: 50px;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+a {
+    font-family: Poppins;
+    padding:0 12px;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: red;
+}
+
+.container {
+    font-family: Poppins;
+    display: flex;
+    min-height: 65vh;
+    margin: 23px auto;
+    padding: 10px;
+    width: 70%;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.6);
+}
+
+.song-name {
+    cursor: pointer;
+}
+
+.controls {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: sticky;
+    bottom: 0;
+    height: 20vh;
+    max-width: 100%;
+    background-color: black;
+    color: white;
+}
+
+#myProgressBar {
+    width: 80vw;
+    height: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    #myProgressBar {
+        width:70vw;
+    }
+}
+
+.volume-controls {
+    margin-bottom: 5px;
+}
+
+#volumeControl {
+    height: 5px;
+    
+}
+
+.current-track {
+    padding-top: 5px;
+    font-family: Poppins;
+}
+
+.icons {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.icons i {
+    font-size: 20px; /* Adjust icon size */
+    padding: 5px 10px; /* Adjust padding if needed */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.controls .icons i:hover {
+    transform: scale(1.2);
+    color: white;  /* Change icon color to white on hover */
+}
+
+.song-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.song-list {
+    width: 100%;
+    padding: 0 30px;
+    text-align: center;
+}
+
+@media (max-width: 425px) {
+    .song-list {
+        padding: 0;
+    }
+}
+
+.song-list h1 {
+    margin: 20px auto;
+}
+
+.song-item {
+    height: 40px;
+    display: flex;
+    color: white;
+    margin: 5px 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    border-bottom: 1px solid #ccc;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.song-item:hover {
+    transform: scale(1.03); /* Slightly enlarges the item */
+    background-color: rgba(255, 255, 255, 0.05); /* Light white background for hover effect */
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.4); /* Subtle white shadow on hover */
+}
+
+.song-item img {
+    width: 38px;
+    margin-bottom: 5px;
+    border-radius: 34px; 
+}
+
+.song-item:last-child {
+    border-bottom: none;
+}
+
+.play i {
+    cursor: pointer;
+}
+
+.fa-shuffle.active, .fa-repeat.active {
+    color: #1DB954;
+}
+
+#current-time {
+    margin-right: 10px;
+    font-family: Poppins;
+    font-size: 0.9em;
+}
+
+#duration {
+    margin-left: 10px;
+    font-family: Poppins;
+    font-size: 0.9em;
+}

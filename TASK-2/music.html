@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="music.css">
+</head>
+<body>
+    <script src="music.js"></script>
+    <script src="https://kit.fontawesome.com/7a0e6aea7c.js" crossorigin="anonymous"></script>
+    <nav>
+        <ul>
+            <li><a href="music.html">Home</a></li>
+            <li><a href="playlist.html">Playlist</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="song-list">
+                <h1>Music Company</h1>
+                <div class="song-container">
+                    <div class="song-item">
+                        <img alt="1" src="covers/1.jpg">
+                        <span class="song-name">Warriyo - Mortals [NCS Release]</span>
+                        <span class="play"><span>01:50</span> </span>
+                    </div>
+                    <div class="song-item">
+                        <img alt="1" src="covers/2.jpg">
+                        <span class="song-name">Cielo - Huma-Huma</span>
+                        <span class="play"><span>02:30</span> </span>
+                    </div>
+                    <div class="song-item">
+                        <img alt="1" src="covers/3.jpg">
+                        <span class="song-name">DEAF KEV - Invincible [NCS Release]</span>
+                        <span class="play"><span>03:15</span> </span>
+                    </div>
+                    <div class="song-item">
+                        <img alt="1" src="covers/4.jpg">
+                        <span class="song-name">Heaven - My Heart [NCS Release]</span>
+                        <span class="play"><span>04:00</span> </span>
+                    </div>
+                    <div class="song-item">
+                        <img alt="1" src="covers/5.jpg">
+                        <span class="song-name">Janji Heroes Tonight - [NCS Release]</span>
+                        <span class="play"><span>05:45</span> </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <div class="time-info">
+                <span id="current-time">00:00</span>
+                <input type="range" name="range" id="myProgressBar" min="0" max="100" value="0">
+                <span id="duration">00:00</span>
+            </div>
+            <div class="icons">
+                <i class="fa-solid fa-shuffle"></i>
+                <i class="fa-solid fa-backward-step"></i>
+                <i class="fa-solid fa-play" id="masterPlay"></i>
+                <i class="fa-solid fa-forward-step"></i>
+                <i class="fa-solid fa-repeat"></i>
+            </div>
+            <div class="volume-controls">
+                <i class="fa-solid fa-volume-up" id="volumeIcon"></i>
+                <input type="range" id="volumeControl" min="0" max="100" value="50">
+            </div>
+            <div class="current-track"></div>
+        </div>
+
+    </main>
+</body>
+</html>

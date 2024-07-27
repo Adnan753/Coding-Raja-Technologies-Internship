@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="playlist.css">
+    <script src="https://kit.fontawesome.com/7a0e6aea7c.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="music.html">Home</a></li>
+            <li><a href="playlist.html">Playlist</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="playlist-manager">
+                <h2>Create Playlist</h2>
+                <input type="text" id="newPlaylistName" placeholder="Enter playlist name">
+                <button id="createPlaylist">Create Playlist</button>
+                
+                <h2>Playlists</h2>
+                <div id="playlistsContainer"></div>
+            </div>
+
+            <div class="track-manager">
+                <h2>Available Tracks</h2>
+                <div id="availableTracksList"></div>
+                
+                <h2>Manage Playlist</h2>
+                <select id="playlistSelect">
+                    <option value="">Select a playlist</option>
+                </select>
+                <button id="addTrack">Add Track</button>
+            </div>
+
+            <div id="songContainer"></div>
+
+            
+            <div class="controls">
+                <input type="range" name="range" id="myProgressBar" min="0" max="100">
+                <div class="icons">
+                    <i class="fa-solid fa-shuffle"></i>
+                    <i class="fa-solid fa-backward-step"></i>
+                    <i class="fa-solid fa-play" id="masterPlay"></i>
+                    <i class="fa-solid fa-forward-step"></i>
+                    <i class="fa-solid fa-repeat"></i>
+                    <i class="fa-solid fa-volume-up" id="volumeIcon"></i>
+                    <input type="range" id="volumeControl" min="0" max="100" value="50">
+                </div>
+                <div id="currentTrackName"></div>
+            </div>
+            
+        </div>
+    </main>
+    <script src="playlist.js"></script>
+</body>
+</html>
