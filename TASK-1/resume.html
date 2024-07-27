@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="resume.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="music.html">Home</a></li>
+        </ul>
+    </nav>
+    <main>
+        <form class="form" onsubmit="generateCV(event)">
+            <h2>Personal Details</h2>
+            <div class="row">
+                <div class="input-box">
+                    <label for="fnameField">First Name</label>
+                    <input type="text" placeholder="John" id="fnameField">
+                </div>
+                <div class="input-box">
+                    <label for="lnameField">Last Name</label>
+                    <input type="text" placeholder="Doe" id="lnameField">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-box">
+                    <label for="emailField">Email</label>
+                    <input type="text" placeholder="abc123@gmail.com" id="emailField">
+                </div>
+                <div class="input-box">
+                    <label for="contactField">Phone</label>
+                    <input type="text" placeholder="7387793662" id="contactField">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-box">
+                    <label for="addressField">Address</label>
+                    <input type="text" placeholder="Pune" id="addressField">
+                </div>
+                <div class="input-box">
+                    <label for="hobbieField">Hobbies</label>
+                    <input type="text" placeholder="GitHub" id="hobbieField">
+                </div>
+            </div>
+            <h3>Links</h3>
+            <div class="input-box">
+                <label for="websiteField">Website Portfolio</label>
+                <input type="text" placeholder="Link" id="websiteField">
+            </div>
+            <div class="input-box">
+                <label for="linkedField">LinkedIn</label>
+                <input type="text" placeholder="LinkedIn" id="linkedField">
+            </div>
+            <div class="input-box">
+                <label for="githubField">GitHub</label>
+                <input type="text" placeholder="GitHub" id="githubField">
+            </div>
+            <h3>Overview</h3>
+            <div class="section">
+                <label for="overviewField">Overview</label>
+                <textarea id="overviewField">Kuch to likho !</textarea>
+            </div>
+            <h3>Education</h3>
+            <div class="section">
+                <label for="educationField">Education</label>
+                <textarea id="educationField">Kuch to likho !</textarea>
+            </div>
+            <h3>Work Experience</h3>
+            <div class="section">
+                <label for="experienceField">Experience</label>
+                <textarea id="experienceField">Kuch to likho !</textarea>
+            </div>
+            <h3>Certifications</h3>
+            <div class="section">
+                <label for="certificationsField">Certifications</label>
+                <textarea id="certificationsField">Kuch to likho !</textarea>
+            </div>
+            <h3>Skills</h3>
+            <div class="section">
+                <label for="skillsField">Skills</label>
+                <textarea id="skillsField">Kuch to likho !</textarea>
+            </div>
+            <label for="templateSelect">Select Template:</label>
+            <select id="templateSelect">
+                <option value="template1">Template 1</option>
+                <option value="template2">Template 2</option>
+                <option value="template3">Template 3</option>
+                <!-- Add more templates as needed -->
+            </select>
+            <button type="submit">Generate CV</button>
+        </form>
+    </main>
+    <div class="preview" style="display: none;">
+        <div class="row-preview">
+            <div class="col-1">
+                <img src="https://i.pngimg.me/thumb/f/720/c3f2c592f9.jpg" alt="">
+                <div class="container">
+                    <p id="nameT">Adnan Akbar Patel</p>
+                    <p id="contactT">7387793662</p>
+                    <p id="emailT">abc@gmail.com</p>
+                    <p id="addressT">Pune</p>
+                    <hr>
+                    <p id="websiteT"><a href="https://www.google.co.in/">Google</a></p>
+                    <p id="githubT"><a href="#1">Google</a></p>
+                    <p id="linkedT"><a href="#1">Google</a></p>
+                    <hr>
+                    <h4>Hobbies</h4>
+                    <p id="hobbieT"></p>
+                </div>
+            </div>
+            <div class="col-2">
+                <h1 id="nameT2">Adnan Akbar Patel </h1>
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Overview</h3>
+                    </div>
+                    <div class="card-body overview-section">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci atque voluptatum, dolorem
+                            non debitis tenetur illum praesentium eligendi nam saepe.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Education</h3>
+                    </div>
+                    <div class="card-body education-section">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Experience</h3>
+                    </div>
+                    <div class="card-body experience-section">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Certifications</h3>
+                    </div>
+                    <div class="card-body certifications-section">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Skills</h3>
+                    </div>
+                    <div class="card-body skills-section">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="downloadPDF" onclick="printCV()">Download as PDF</button>
+        <button id="downloadWord" onclick="downloadAsWord()">Download as Word</button>
+    </div>
+    <footer></footer>
+
+    <script src="resume.js"></script>
+</body>
+
+</html>
